@@ -1,4 +1,5 @@
 import bwipjs from 'bwip-js'
+// @ts-ignore: o jsbarcode não traz tipos e a Vercel não carrega arquivos .d.ts avulsos
 import * as code128a from 'jsbarcode/bin/barcodes/CODE128/CODE128A.js'
 import { BRASAO_GIF_BASE64 } from './ui/brasao.js'
 
