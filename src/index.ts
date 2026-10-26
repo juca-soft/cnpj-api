@@ -8,7 +8,7 @@ import { docPages, type Lang } from './ui/i18n.js'
 import { clientJs } from './ui/client.js'
 import { BRASAO_GIF_BASE64 } from './ui/brasao.js'
 import { css } from './ui/styles.js'
-import type { Ctx } from './ui/shell.js'
+import { render, type Ctx } from './ui/shell.js'
 import { openapi } from './openapi.js'
 import { renderCard, toCard } from './card.js'
 import { lookupCnpj, proxyPrimary, searchQuery } from './upstream.js'
@@ -29,15 +29,15 @@ for (const lang of ['pt', 'en'] as const) {
       const r = await proxyPrimary(`?${query}`)
       return c.body(r.body, r.status as 200, { 'Content-Type': 'application/json; charset=UTF-8' })
     }
-    return c.html(Home({ ctx: ctxOf(c, lang, '/') }))
+    return c.html(render(Home({ ctx: ctxOf(c, lang, '/') })))
   })
-  app.get(`${prefix}/docs`, (c) => c.html(DocsPage({ ctx: ctxOf(c, lang, '/docs'), page: docPages[lang][0] })))
+  app.get(`${prefix}/docs`, (c) => c.html(render(DocsPage({ ctx: ctxOf(c, lang, '/docs'), page: docPages[lang][0] }))))
   app.get(`${prefix}/docs/:slug`, (c) => {
     const slug = c.req.param('slug')
     if (slug === 'about') return c.redirect(`${prefix}/docs`, 301)
     const page = docPages[lang].find((p) => p.slug === slug)
-    if (!page) return c.html(DocsNotFound({ ctx: ctxOf(c, lang, '/docs') }), 404)
-    return c.html(DocsPage({ ctx: ctxOf(c, lang, `/docs/${slug}`), page }))
+    if (!page) return c.html(render(DocsNotFound({ ctx: ctxOf(c, lang, '/docs') })), 404)
+    return c.html(render(DocsPage({ ctx: ctxOf(c, lang, `/docs/${slug}`), page })))
   })
 }
 // Endpoints auxiliares (mesmo contrato da Minha Receita).
