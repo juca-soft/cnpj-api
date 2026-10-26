@@ -6,7 +6,7 @@ A simple HTTP API to look up Brazilian companies by **CNPJ**, numeric or **alpha
 
 Built with [Hono](https://hono.dev) and TypeScript. It ships with its own test page, bilingual docs (pt/en, light/dark theme) and a printable **registration certificate** (comprovante de inscrição).
 
-🌐 **<https://cnpj.juk.re>** · [Docs](https://cnpj.juk.re/en/docs) · [Try it](https://cnpj.juk.re/en)
+**<https://cnpj.juk.re>** · [Docs](https://cnpj.juk.re/en/docs) · [Try it](https://cnpj.juk.re/en)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/juca-soft/cnpj-api)
 

@@ -6,7 +6,7 @@ Uma API HTTP simples para consultar empresas brasileiras pelo **CNPJ**, numéric
 
 Feita com [Hono](https://hono.dev) e TypeScript. Vem com página de testes própria, documentação em dois idiomas (pt/en, tema claro/escuro) e o **comprovante de inscrição** pronto para imprimir.
 
-🌐 **<https://cnpj.juk.re>** · [Documentação](https://cnpj.juk.re/docs) · [Testar](https://cnpj.juk.re)
+**<https://cnpj.juk.re>** · [Documentação](https://cnpj.juk.re/docs) · [Testar](https://cnpj.juk.re)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/juca-soft/cnpj-api)
 
