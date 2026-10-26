@@ -4,19 +4,13 @@
     "module": "NodeNext",
     "strict": true,
     "skipLibCheck": true,
-    "types": [
-      "node"
-    ],
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node"],
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
     "rootDir": "./src",
     "outDir": "./dist"
   },
-  "exclude": [
-    "node_modules",
-    "meuip"
-  ],
-  "include": [
-    "src"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
