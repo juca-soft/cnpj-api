@@ -17,9 +17,6 @@ importers:
       hono:
         specifier: ^4.13.14
         version: 4.13.14
-      jsbarcode:
-        specifier: ^3.12.3
-        version: 3.12.3
     devDependencies:
       '@types/node':
         specifier: ^26.1.1
@@ -336,9 +333,6 @@ packages:
     resolution: {integrity: sha512-yhRLQ21U6qa9Hsu2N7Qcbh8tE+WKEcoErjIo56LeSGiGXGp9sA7UpE86Ui9uexb61KakiGwuHMn2QdV7w6i6kQ==}
     engines: {node: '>=16.9.0'}
 
-  jsbarcode@3.12.3:
-    resolution: {integrity: sha512-CuHU9hC6dPsHF5oVFMo8NW76uQVjH4L22CsP4hW+dNnGywJHC/B0ThA1CTDVLnxKLrrpYdicBLnd2xsgTfRnvg==}
-
   tsx@4.23.15:
     resolution: {integrity: sha512-Yiex1Ovn8z2xPpOWckIiysV1SSyRMY9BkLF++q0yKiDxCqRhosKfMg3janKkiLBwZ5c/YryloKwGZcrEmtwxKw==}
     engines: {node: '>=18.0.0'}
@@ -535,8 +529,6 @@ snapshots:
     optional: true
 
   hono@4.13.14: {}
-
-  jsbarcode@3.12.3: {}
 
   tsx@4.23.15:
     dependencies:
